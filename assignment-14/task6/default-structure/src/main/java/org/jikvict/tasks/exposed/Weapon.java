@@ -11,9 +11,9 @@ package org.jikvict.tasks.exposed;
  * </ul>
  */
 public class Weapon {
-
-    // TODO: Declare private fields
-
+    private String name;
+    private int damage;
+    private int durability;
     /**
      * Creates a new Weapon.
      *
@@ -23,12 +23,34 @@ public class Weapon {
      */
     public Weapon(String name, int damage, int durability) {
         // TODO: Initialise fields
+        this.name = name;
+        this.damage = damage;
+        this.durability = durability;
     }
 
-    // TODO: Implement getters and setters for ALL fields:
-    //   getName(), setName(String)
-    //   getDamage(), setDamage(int)
-    //   getDurability(), setDurability(int)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
 
     /**
      * Uses the weapon once, reducing durability by 1.
@@ -38,16 +60,15 @@ public class Weapon {
      *         {@code false} otherwise
      */
     public boolean use() {
-        // TODO: Implement
-        return false;
+        this.durability--;
+        return this.durability > 0;
     }
 
     /**
      * @return {@code true} if durability is 0
      */
     public boolean isBroken() {
-        // TODO: Implement
-        return true;
+        return this.durability == 0;
     }
 
     /**
@@ -55,7 +76,6 @@ public class Weapon {
      */
     @Override
     public String toString() {
-        // TODO: Implement
-        return null;
+        return "Weapon" + this.name + "(Damage: " + this.damage + ", " + "Durability: " + this.durability + ")";
     }
 }
