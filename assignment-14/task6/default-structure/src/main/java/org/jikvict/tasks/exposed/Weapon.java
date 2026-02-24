@@ -22,7 +22,6 @@ public class Weapon {
      * @param durability remaining uses before the weapon breaks
      */
     public Weapon(String name, int damage, int durability) {
-        // TODO: Initialise fields
         this.name = name;
         this.damage = damage;
         this.durability = durability;
@@ -60,15 +59,15 @@ public class Weapon {
      *         {@code false} otherwise
      */
     public boolean use() {
-        this.durability--;
-        return this.durability > 0;
+        durability--;
+        return durability > 0;
     }
 
     /**
      * @return {@code true} if durability is 0
      */
     public boolean isBroken() {
-        return this.durability == 0;
+        return durability == 0;
     }
 
     /**
@@ -76,6 +75,6 @@ public class Weapon {
      */
     @Override
     public String toString() {
-        return "Weapon" + this.name + "(Damage: " + this.damage + ", " + "Durability: " + this.durability + ")";
+        return "Weapon" + name + "(Damage: " + damage + ", " + "Durability: " + durability + ")";
     }
 }

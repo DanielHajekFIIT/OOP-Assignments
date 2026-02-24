@@ -22,9 +22,6 @@ package org.jikvict.tasks.exposed;
  * </ul>
  */
 public abstract class GameCharacter {
-
-    // TODO: Declare all fields listed above.
-    //       Remember: most fields are private, but some are protected or have getters/setters.
     private String name;
     private int health;
     private int maxHealth;
@@ -48,7 +45,6 @@ public abstract class GameCharacter {
      * @param baseAttackPower base attack power
      */
     public GameCharacter(String name, int health, int baseAttackPower) {
-        // TODO: Initialise all fields
         this.name = name;
         this.health = health;
         this.baseAttackPower = baseAttackPower;
@@ -87,8 +83,8 @@ public abstract class GameCharacter {
      * @return info string
      */
     public String getInfo() {
-        // TODO: Implement
-        return null;
+        return "Name: " + name + " | Type: " + getCharacterType()
+                + " | HP: " + health + "/" + maxHealth + " | Level: " + level;
     }
 
     /**
@@ -102,7 +98,12 @@ public abstract class GameCharacter {
      * @param target the character to attack
      */
     public void attack(GameCharacter target) {
-        // TODO: Implement
+        int totalDamage = calculateDamage();
+        if (weapon != null && !weapon.isBroken()) {
+            totalDamage += weapon.getDamage();
+            weapon.use();
+        }
+        target.takeDamage(totalDamage);
     }
 
     /**
@@ -114,8 +115,11 @@ public abstract class GameCharacter {
      * @return potential total damage
      */
     public int attack() {
-        // TODO: Implement (calculateDamage + weapon damage if weapon is equipped and not broken)
-        return 0;
+        int totalDamage = calculateDamage();
+        if (weapon != null && !weapon.isBroken()) {
+            totalDamage += weapon.getDamage();
+        }
+        return totalDamage;
     }
 
     /**
@@ -128,7 +132,13 @@ public abstract class GameCharacter {
      * @param damage incoming damage
      */
     public void takeDamage(int damage) {
-        // TODO: Implement
+        if (damage > health) {
+            health = 0;
+            alive = false;
+        }
+        else {
+            health -= damage;
+        }
     }
 
     /**
@@ -141,24 +151,62 @@ public abstract class GameCharacter {
      * @param amount hit points to restore
      */
     public void heal(int amount) {
-        // TODO: Implement
+        if (alive) {
+            if (health + amount > maxHealth) {
+                health = maxHealth;
+            } else {
+                health += amount;
+            }
+        }
     }
+
 
     /**
      * Levels up: {@code level += 1}, {@code maxHealth += 10}, {@code baseAttackPower += 2}.
      */
     public void levelUp() {
-        // TODO: Implement
+        level += 1;
+        maxHealth += 10;
+        baseAttackPower += 2;
     }
 
     // ──────────────────────── getters & setters ──────────────────────────────
 
-    // TODO: Implement the following getters:
-    //   getName(), getHealth(), getMaxHealth(), getBaseAttackPower(),
-    //   getLevel(), getWeapon(), isAlive()
+    public String getName() {
+        return name;
+    }
 
-    // TODO: Implement the following setters:
-    //   setName(String name), setWeapon(Weapon weapon)
+    public int getHealth() {
+        return health;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getBaseAttackPower() {
+        return baseAttackPower;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
 
     // ──────────────────────────── toString ────────────────────────────────────
 
@@ -167,7 +215,6 @@ public abstract class GameCharacter {
      */
     @Override
     public String toString() {
-        // TODO: Implement
-        return null;
+        return getCharacterType() + ": " + name + " (Level" + level + ")";
     }
 }
