@@ -6,6 +6,7 @@ public class Mage extends GameCharacter {
 
     public Mage(String name, int health, int baseAttackPower, int mana) {
         super(name, health, baseAttackPower);
+        this.mana = mana;
         this.maxMana = mana;
     }
 
@@ -19,7 +20,7 @@ public class Mage extends GameCharacter {
 
     @Override
     public String getInfo() {
-        return super.getInfo() + " | Mana:  " + mana/maxMana;
+        return super.getInfo() + " | Mana:  " + mana + "/" + maxMana;
     }
 
     public String castSpell() {
@@ -28,7 +29,7 @@ public class Mage extends GameCharacter {
         }
         else {
             mana -= 10;
-            return getName() + " casts a spell";
+            return getName() + " casts a spell!";
         }
     }
 

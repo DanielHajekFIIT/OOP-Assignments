@@ -132,7 +132,7 @@ public abstract class GameCharacter {
      * @param damage incoming damage
      */
     public void takeDamage(int damage) {
-        if (damage > health) {
+        if (damage >= health) {
             health = 0;
             alive = false;
         }

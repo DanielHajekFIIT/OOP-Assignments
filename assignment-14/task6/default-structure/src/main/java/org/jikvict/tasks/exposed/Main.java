@@ -9,9 +9,6 @@ package org.jikvict.tasks.exposed;
 public class Main {
 
     public static void main(String[] args) {
-        // TODO: After you implement Warrior, Mage and Archer, uncomment the code below.
-
-        /*
         GameCharacter warrior = new Warrior("Arthur", 100, 10, 6);
         GameCharacter mage    = new Mage("Gandalf", 80, 15, 50);
         GameCharacter archer  = new Archer("Legolas", 90, 12, 20);
@@ -32,6 +29,5 @@ public class Main {
         Weapon sword = new Weapon("Excalibur", 15, 100);
         warrior.setWeapon(sword);
         System.out.println("Warrior potential damage with weapon: " + warrior.attack());
-        */
     }
 }

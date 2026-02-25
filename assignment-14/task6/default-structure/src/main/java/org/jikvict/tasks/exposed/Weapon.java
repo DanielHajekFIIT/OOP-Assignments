@@ -59,8 +59,12 @@ public class Weapon {
      *         {@code false} otherwise
      */
     public boolean use() {
-        durability--;
-        return durability > 0;
+        if (durability > 0) {
+            durability -= 1;
+            return true;
+        }
+
+        return false;
     }
 
     /**
