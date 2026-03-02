@@ -15,7 +15,6 @@ public class MagicAttackStrategy implements AttackStrategy {
      */
     @Override
     public int execute(int baseAttackPower) {
-        // TODO: Implement — return baseAttackPower * 3
-        return 0;
+        return baseAttackPower * 3;
     }
 }

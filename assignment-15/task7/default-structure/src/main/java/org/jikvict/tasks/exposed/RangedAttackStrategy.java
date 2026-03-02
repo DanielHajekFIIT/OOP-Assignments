@@ -15,7 +15,6 @@ public class RangedAttackStrategy implements AttackStrategy {
      */
     @Override
     public int execute(int baseAttackPower) {
-        // TODO: Implement — return baseAttackPower + 15
-        return 0;
+        return baseAttackPower + 15;
     }
 }

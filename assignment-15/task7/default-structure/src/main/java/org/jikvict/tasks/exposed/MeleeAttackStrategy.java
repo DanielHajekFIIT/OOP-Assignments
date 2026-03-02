@@ -15,7 +15,6 @@ public class MeleeAttackStrategy implements AttackStrategy {
      */
     @Override
     public int execute(int baseAttackPower) {
-        // TODO: Implement — return (int)(baseAttackPower * 1.5)
-        return 0;
+        return (int)(baseAttackPower * 1.5);
     }
 }
