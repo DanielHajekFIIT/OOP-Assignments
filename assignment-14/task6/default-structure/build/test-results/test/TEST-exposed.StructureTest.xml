@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="exposed.StructureTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-02-25T13:52:44.634Z" hostname="dunak-Aspire-A515-48M" time="0.102">
+  <properties/>
+  <testcase name="GameCharacter should be an abstract class" classname="exposed.StructureTest" time="0.027"/>
+  <testcase name="Mage class should exist and extend GameCharacter" classname="exposed.StructureTest" time="0.06"/>
+  <testcase name="Warrior class should exist and extend GameCharacter" classname="exposed.StructureTest" time="0.002"/>
+  <testcase name="Archer class should exist and extend GameCharacter" classname="exposed.StructureTest" time="0.002"/>
+  <testcase name="Weapon class should be instantiable" classname="exposed.StructureTest" time="0.002"/>
+  <testcase name="Warrior, Mage, Archer should each report the correct character type" classname="exposed.StructureTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
