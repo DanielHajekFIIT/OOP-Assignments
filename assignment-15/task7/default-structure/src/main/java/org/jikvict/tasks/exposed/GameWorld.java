@@ -20,18 +20,19 @@ import java.util.List;
  */
 public class GameWorld {
 
-    // TODO: Declare a private static GameWorld field called "instance"
+    private static GameWorld instance;
 
-    // TODO: Declare a private List<GameCharacter> field called "party"
+    private List<GameCharacter> party;
 
-    // TODO: Declare a private CombatEventManager field called "eventManager"
+    private CombatEventManager eventManager;
 
     /**
      * Private constructor — initialises an empty party list and a new
      * {@link CombatEventManager}.
      */
     private GameWorld() {
-        // TODO: Initialize party (ArrayList) and eventManager (new CombatEventManager)
+        this.party = new ArrayList<>();
+        this.eventManager = new CombatEventManager();
     }
 
     /**
@@ -41,8 +42,10 @@ public class GameWorld {
      * @return the singleton instance
      */
     public static GameWorld getInstance() {
-        // TODO: If instance is null, create a new GameWorld. Return instance.
-        return null;
+        if (instance == null) {
+            instance = new GameWorld();
+        }
+        return instance;
     }
 
     /**
@@ -51,7 +54,7 @@ public class GameWorld {
      * This method exists so that unit tests can start with a fresh GameWorld.
      */
     public static void resetInstance() {
-        // TODO: Set the static instance field to null
+        instance = null;
     }
 
     /**
@@ -60,7 +63,7 @@ public class GameWorld {
      * @param character the character to add
      */
     public void addCharacter(GameCharacter character) {
-        // TODO: Add the character to the party list
+        this.party.add(character);
     }
 
     /**
@@ -69,7 +72,7 @@ public class GameWorld {
      * @param name the name of the character to remove
      */
     public void removeCharacter(String name) {
-        // TODO: Remove the character with the matching name from the party
+        this.party.removeIf(character -> character.getName().equals(name));
     }
 
     /**
@@ -79,7 +82,9 @@ public class GameWorld {
      * @return the character, or {@code null} if not found
      */
     public GameCharacter findCharacter(String name) {
-        // TODO: Iterate over the party and return the character whose name matches
+        for (GameCharacter character : this.party) {
+            if (character.getName().equals(name)) {return character;}
+        }
         return null;
     }
 
@@ -89,8 +94,7 @@ public class GameWorld {
      * @return unmodifiable list of characters
      */
     public List<GameCharacter> getParty() {
-        // TODO: Return Collections.unmodifiableList(...) wrapping the party
-        return Collections.emptyList();
+        return Collections.unmodifiableList(this.party);
     }
 
     /**
@@ -99,7 +103,6 @@ public class GameWorld {
      * @return the event manager
      */
     public CombatEventManager getEventManager() {
-        // TODO: Return the eventManager field
-        return null;
+        return eventManager;
     }
 }
