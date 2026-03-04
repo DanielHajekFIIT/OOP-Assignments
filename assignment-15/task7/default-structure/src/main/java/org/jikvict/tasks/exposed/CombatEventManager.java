@@ -11,14 +11,12 @@ import java.util.List;
  * all registered listeners when combat events occur.
  */
 public class CombatEventManager {
-
-    // TODO: Declare a private List<CombatEventListener> field called "listeners"
-
+    private List<CombatEventListener> listeners;
     /**
      * Creates a new CombatEventManager with an empty listener list.
      */
     public CombatEventManager() {
-        // TODO: Initialize the listeners list (use ArrayList)
+        this.listeners = new ArrayList<>();
     }
 
     /**
@@ -27,7 +25,7 @@ public class CombatEventManager {
      * @param listener the listener to add
      */
     public void addListener(CombatEventListener listener) {
-        // TODO: Add the listener to the list
+        this.listeners.add(listener);
     }
 
     /**
@@ -36,7 +34,7 @@ public class CombatEventManager {
      * @param listener the listener to remove
      */
     public void removeListener(CombatEventListener listener) {
-        // TODO: Remove the listener from the list
+        this.listeners.remove(listener);
     }
 
     /**
@@ -45,8 +43,7 @@ public class CombatEventManager {
      * @return unmodifiable list of listeners
      */
     public List<CombatEventListener> getListeners() {
-        // TODO: Return Collections.unmodifiableList(...) wrapping the listeners
-        return Collections.emptyList();
+        return Collections.unmodifiableList(listeners);
     }
 
     /**
@@ -57,7 +54,9 @@ public class CombatEventManager {
      * @param damage       the amount of damage
      */
     public void notifyDamageDealt(String attackerName, String targetName, int damage) {
-        // TODO: Iterate over all listeners and call onDamageDealt(...)
+        for  (CombatEventListener listener : listeners) {
+            listener.onDamageDealt(attackerName, targetName, damage);
+        }
     }
 
     /**
@@ -66,7 +65,9 @@ public class CombatEventManager {
      * @param characterName the name of the defeated character
      */
     public void notifyCharacterDeath(String characterName) {
-        // TODO: Iterate over all listeners and call onCharacterDeath(...)
+        for  (CombatEventListener listener : listeners) {
+            listener.onCharacterDeath(characterName);
+        }
     }
 
     /**
@@ -76,6 +77,8 @@ public class CombatEventManager {
      * @param newLevel      the new level
      */
     public void notifyLevelUp(String characterName, int newLevel) {
-        // TODO: Iterate over all listeners and call onLevelUp(...)
+        for (CombatEventListener listener : listeners) {
+            listener.onLevelUp(characterName, newLevel);
+        }
     }
 }

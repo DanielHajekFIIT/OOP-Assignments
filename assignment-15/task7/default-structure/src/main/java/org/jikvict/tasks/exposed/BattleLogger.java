@@ -15,29 +15,27 @@ import java.util.List;
  * </ul>
  */
 public class BattleLogger implements CombatEventListener {
-
-    // TODO: Declare a private List<String> field called "log"
-
+    private List<String> log;
     /**
      * Creates a new BattleLogger with an empty log.
      */
     public BattleLogger() {
-        // TODO: Initialize the log list (use ArrayList)
+        log = new ArrayList<>();
     }
 
     @Override
     public void onDamageDealt(String attackerName, String targetName, int damage) {
-        // TODO: Add "DAMAGE: {attackerName} dealt {damage} damage to {targetName}" to the log
+        log.add("DAMAGE: " + attackerName + " dealt " + damage + " damage to " + targetName);
     }
 
     @Override
     public void onCharacterDeath(String characterName) {
-        // TODO: Add "DEATH: {characterName} has been defeated" to the log
+        log.add("DEATH: " + characterName + " has been defeated");
     }
 
     @Override
     public void onLevelUp(String characterName, int newLevel) {
-        // TODO: Add "LEVEL UP: {characterName} reached level {newLevel}" to the log
+        log.add("LEVEL UP: " + characterName + " reached level " + newLevel);
     }
 
     /**
@@ -46,14 +44,13 @@ public class BattleLogger implements CombatEventListener {
      * @return unmodifiable list of log messages
      */
     public List<String> getLog() {
-        // TODO: Return Collections.unmodifiableList(...) wrapping the log
-        return Collections.emptyList();
+        return Collections.unmodifiableList(log);
     }
 
     /**
      * Clears all log entries.
      */
     public void clearLog() {
-        // TODO: Clear the log list
+        log.clear();
     }
 }
