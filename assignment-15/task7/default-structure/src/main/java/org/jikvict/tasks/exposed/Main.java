@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO: After implementing all patterns, uncomment the code below.
 
-        /*
+
         // ═══════════════════════ Strategy Pattern ═══════════════════════
 
         GameCharacter warrior = new Warrior("Arthur", 100, 10, 6);
@@ -63,6 +63,5 @@ public class Main {
         if (found != null) {
             System.out.println("Found: " + found);
         }
-        */
     }
 }

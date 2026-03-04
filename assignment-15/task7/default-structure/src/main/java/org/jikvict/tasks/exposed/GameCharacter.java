@@ -24,7 +24,7 @@ public abstract class GameCharacter {
     private Weapon weapon;
     private boolean alive;
 
-    private AttackStrategy attackStrategy = null;
+    private AttackStrategy attackStrategy;
 
     /**
      * Creates a new GameCharacter.
@@ -41,6 +41,7 @@ public abstract class GameCharacter {
         this.level = 1;
         this.alive = true;
         this.weapon = null;
+        this.attackStrategy =  null;
     }
 
     // ──────────────────────────── abstract methods ────────────────────────────
@@ -157,11 +158,10 @@ public abstract class GameCharacter {
      */
     public int executeStrategy() {
         if (attackStrategy != null) {
-           attackStrategy.execute(baseAttackPower);
+           return attackStrategy.execute(baseAttackPower);
         }
         else {
-            calculateDamage();
+            return calculateDamage();
         }
-        return 0;
     }
 }
