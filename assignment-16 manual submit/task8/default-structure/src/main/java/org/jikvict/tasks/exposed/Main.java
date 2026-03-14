@@ -60,9 +60,9 @@ public class Main {
         }
 
         Inventory<Potion> bag = new Inventory<>(10);
-        Potion weakPotion = new BasePotion("Weak Potion", "a", 10, 67);
-        Potion strongPotion = new BasePotion("Strong Potion", "b", 50, 67);
-        Potion megaPotion = new BasePotion("Mega Elixir", "c", 100, 67);
+        Potion weakPotion = new BasePotion("Weak Potion", "", 10, 67);
+        Potion strongPotion = new BasePotion("Strong Potion", "", 50, 67);
+        Potion megaPotion = new BasePotion("Mega Elixir", "", 100, 67);
         bag.add(weakPotion);    // healing 10
         bag.add(strongPotion);  // healing 50
         bag.add(megaPotion);    // healing 100
