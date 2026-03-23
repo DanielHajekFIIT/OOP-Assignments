@@ -1,0 +1,62 @@
+![Plant] Static initializer block
+"[Flower] Static initializer block
+#[Plant] Instance initializer block
+%[Plant] Constructor called for: Rose
+$[Flower] Instance initializer block
+&[Flower] Constructor called for: Rose
+ [Herb] Static initializer block
+#[Plant] Instance initializer block
+&[Plant] Constructor called for: Basil
+"[Herb] Instance initializer block
+#[Plant] Instance initializer block
+)[Plant] Constructor called for: TestRose
+$[Flower] Instance initializer block
+*[Flower] Constructor called for: TestRose
+%[Succulent] Static initializer block
+#[Plant] Instance initializer block
+)[Plant] Constructor called for: TinySucc
+'[Succulent] Instance initializer block
+-[Succulent] Constructor called for: TinySucc
+#[Plant] Instance initializer block
++[Plant] Constructor called for: TinyFlower
+$[Flower] Instance initializer block
+,[Flower] Constructor called for: TinyFlower
+#[Plant] Instance initializer block
+,[Plant] Constructor called for: SmallFlower
+$[Flower] Instance initializer block
+-[Flower] Constructor called for: SmallFlower
+#[Plant] Instance initializer block
+&[Plant] Constructor called for: Basil
+"[Herb] Instance initializer block
+	#[Plant] Instance initializer block
+	&[Plant] Constructor called for: Basil
+	"[Herb] Instance initializer block
+
+#[Plant] Instance initializer block
+
+%[Plant] Constructor called for: Aloe
+
+'[Succulent] Instance initializer block
+
+)[Succulent] Constructor called for: Aloe
+#[Plant] Instance initializer block
+&[Plant] Constructor called for: Basil
+"[Herb] Instance initializer block
+#[Plant] Instance initializer block
+%[Plant] Constructor called for: Rose
+$[Flower] Instance initializer block
+&[Flower] Constructor called for: Rose
+#[Plant] Instance initializer block
+%[Plant] Constructor called for: Aloe
+'[Succulent] Instance initializer block
+)[Succulent] Constructor called for: Aloe
+#[Plant] Instance initializer block
+&[Plant] Constructor called for: Basil
+"[Herb] Instance initializer block
+#[Plant] Instance initializer block
+%[Plant] Constructor called for: Mint
+"[Herb] Instance initializer block
+#[Plant] Instance initializer block
+%[Plant] Constructor called for: Rose
+$[Flower] Instance initializer block
+&[Flower] Constructor called for: Rose

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="exposed.InterfaceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-03-14T12:08:28.623Z" hostname="dunak-Aspire-A515-48M" time="0.098">
+  <properties/>
+  <testcase name="Flower.water() should increase health by 10, capped at 100" classname="exposed.InterfaceTest" time="0.035"/>
+  <testcase name="Herb.fertilize() should increase height by 2.0" classname="exposed.InterfaceTest" time="0.009"/>
+  <testcase name="Flower.grow() should increase height by 2.5 per call" classname="exposed.InterfaceTest" time="0.002"/>
+  <testcase name="Succulent should not grow beyond maxHeight" classname="exposed.InterfaceTest" time="0.004"/>
+  <testcase name="Flower should not grow beyond maxHeight" classname="exposed.InterfaceTest" time="0.002"/>
+  <testcase name="Flower.isFullyGrown() should return true when height &gt;= maxHeight" classname="exposed.InterfaceTest" time="0.003"/>
+  <testcase name="Herb.getLabel() should return formatted label" classname="exposed.InterfaceTest" time="0.012"/>
+  <testcase name="Herb.getPrice() should return the price passed to constructor" classname="exposed.InterfaceTest" time="0.002"/>
+  <testcase name="Succulent.grow() should increase height by 0.5 per call" classname="exposed.InterfaceTest" time="0.002"/>
+  <testcase name="Herb.grow() should increase height by 1.8 per call" classname="exposed.InterfaceTest" time="0.002"/>
+  <testcase name="PlantShop should correctly categorize plants by interface" classname="exposed.InterfaceTest" time="0.003"/>
+  <testcase name="Herb.water() should increase health by 15, starting from 60" classname="exposed.InterfaceTest" time="0.001"/>
+  <testcase name="Flower.fertilize() should increase height by 1.5" classname="exposed.InterfaceTest" time="0.002"/>
+  <system-out><![CDATA[[Plant] Static initializer block
+[Flower] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+[Herb] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: TestRose
+[Flower] Instance initializer block
+[Flower] Constructor called for: TestRose
+[Succulent] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: TinySucc
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: TinySucc
+[Plant] Instance initializer block
+[Plant] Constructor called for: TinyFlower
+[Flower] Instance initializer block
+[Flower] Constructor called for: TinyFlower
+[Plant] Instance initializer block
+[Plant] Constructor called for: SmallFlower
+[Flower] Instance initializer block
+[Flower] Constructor called for: SmallFlower
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Aloe
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: Aloe
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+[Plant] Instance initializer block
+[Plant] Constructor called for: Aloe
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: Aloe
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Mint
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

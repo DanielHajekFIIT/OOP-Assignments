@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - InterfaceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>InterfaceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/exposed.html">exposed</a> &gt; InterfaceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">13</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.079s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Flower.fertilize() should increase height by 1.5</td>
+<td class="success">flowerFertilize()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Flower should not grow beyond maxHeight</td>
+<td class="success">flowerGrowCapped()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Flower.grow() should increase height by 2.5 per call</td>
+<td class="success">flowerGrowIncreasesHeight()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Flower.isFullyGrown() should return true when height &gt;= maxHeight</td>
+<td class="success">flowerIsFullyGrown()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Flower.water() should increase health by 10, capped at 100</td>
+<td class="success">flowerWater()</td>
+<td class="success">0.035s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Herb.fertilize() should increase height by 2.0</td>
+<td class="success">herbFertilize()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Herb.getLabel() should return formatted label</td>
+<td class="success">herbGetLabel()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Herb.getPrice() should return the price passed to constructor</td>
+<td class="success">herbGetPrice()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Herb.grow() should increase height by 1.8 per call</td>
+<td class="success">herbGrowIncreasesHeight()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Herb.water() should increase health by 15, starting from 60</td>
+<td class="success">herbWater()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">PlantShop should correctly categorize plants by interface</td>
+<td class="success">plantShopCategorization()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Succulent should not grow beyond maxHeight</td>
+<td class="success">succulentGrowCapped()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Succulent.grow() should increase height by 0.5 per call</td>
+<td class="success">succulentGrowIncreasesHeight()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>[Plant] Static initializer block
+[Flower] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+[Herb] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: TestRose
+[Flower] Instance initializer block
+[Flower] Constructor called for: TestRose
+[Succulent] Static initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: TinySucc
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: TinySucc
+[Plant] Instance initializer block
+[Plant] Constructor called for: TinyFlower
+[Flower] Instance initializer block
+[Flower] Constructor called for: TinyFlower
+[Plant] Instance initializer block
+[Plant] Constructor called for: SmallFlower
+[Flower] Instance initializer block
+[Flower] Constructor called for: SmallFlower
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Aloe
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: Aloe
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+[Plant] Instance initializer block
+[Plant] Constructor called for: Aloe
+[Succulent] Instance initializer block
+[Succulent] Constructor called for: Aloe
+[Plant] Instance initializer block
+[Plant] Constructor called for: Basil
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Mint
+[Herb] Instance initializer block
+[Plant] Instance initializer block
+[Plant] Constructor called for: Rose
+[Flower] Instance initializer block
+[Flower] Constructor called for: Rose
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.13</a> at Mar 14, 2026, 1:08:28 PM</p>
+</div>
+</div>
+</body>
+</html>
