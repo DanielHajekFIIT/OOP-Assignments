@@ -68,7 +68,7 @@ public class ExperimentRecord implements Serializable {
 
     // Here is where some hookey pokey happens and all the non-transient fields are restored and the transient
     // one, in this case cachedAverage, is recomputed.
-    // A function like this should be private for some reason
+    // A function like this should be private
     // and "Java finds it automatically during deserialization via reflection" (whatever that means)
     @Serial
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
