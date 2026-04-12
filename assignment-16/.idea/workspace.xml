@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb164018-8eb5-4f26-86e3-30499a47f97d" name="Changes" comment="Completed assignment (one test fails because warrior has armour, nothing can be done)">
-      <change afterPath="$PROJECT_DIR$/../assignment-18/task10/default-structure/src/main/java/org/jikvict/tasks/exposed/DuplicateRecordException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assignment-18/task10/default-structure/src/main/java/org/jikvict/tasks/exposed/ExperimentArchive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assignment-18/task10/default-structure/src/main/java/org/jikvict/tasks/exposed/ExperimentRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assignment-18/task10/default-structure/src/main/java/org/jikvict/tasks/exposed/InvalidRecordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignment-17/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../assignment-17/.idea/gradle.xml" afterDir="false" />
-    </list>
+    <list default="true" id="eb164018-8eb5-4f26-86e3-30499a47f97d" name="Changes" comment="Completed assignment (one test fails because warrior has armour, nothing can be done)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="43" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/task8/default-structure">
@@ -109,7 +100,6 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.jikvict.tasks.exposed.Main" />
-      <module name="default-structure.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.jikvict.tasks.exposed.*" />
@@ -234,6 +224,7 @@
       <workItem from="1773519854627" duration="407000" />
       <workItem from="1774260295970" duration="4114000" />
       <workItem from="1774269054501" duration="4428000" />
+      <workItem from="1775386318672" duration="144000" />
     </task>
     <task id="LOCAL-00001" summary="Completed assignment (one test fails because warrior has armour, nothing can be done)">
       <option name="closed" value="true" />
